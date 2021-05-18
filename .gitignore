@@ -1,6 +1,14 @@
 .DS_Store
 node_modules
 /dist
+build/
+temp/
+.env
+coverage
+ormconfig.json
+dist
+uploads/*
+!uploads/.gitkeep
 
 # local env files
 .env
