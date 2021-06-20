@@ -3,9 +3,7 @@ import { ICreateCustomer } from '@modules/customers/domain/models/ICreateCustome
 import { ICustomersRepository } from '@modules/customers/domain/repositories/ICustomersRepository';
 import Customer from '@modules/customers/infra/typeorm/entities/Customer';
 
-class FakeCustomersRepository
-  implements Omit<ICustomersRepository, 'remove' | 'findAll'>
-{
+class FakeCustomersRepository implements ICustomersRepository {
   private customers: Customer[] = [];
 
   public async create({ name, email }: ICreateCustomer): Promise<Customer> {
